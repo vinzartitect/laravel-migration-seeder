@@ -17,4 +17,14 @@ class TrainController extends Controller
 
         return view( 'pages.trains.index', compact('trains') );
     }
+
+    //Rotta show localhost/houses/id
+    public function show($id){
+
+        //Ottenere i dati del DB
+        $train = Train::findOrFail($id);
+
+        return view( 'pages.trains.show', compact('train') );
+    }
+
 }

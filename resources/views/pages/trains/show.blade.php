@@ -2,8 +2,7 @@
 
 @section('content')
 
-<div class="row row-cols-3 g-3">
-    @forelse ( $trains as $key => $train )
+
     <div>
         <div class="col card" style="width: 18rem;">
             <div class="card-body">
@@ -16,13 +15,10 @@
                 <h6 class="card-subtitle mb-2 text-muted">{{ $train -> NumeroCarrozze }}</h6>
                 <h6 class="card-subtitle mb-2 text-muted">{{ $train -> InOrario }}</h6>
                 <h6 class="card-subtitle mb-2 text-muted">{{ $train -> Cancellato }}</h6>                
-                <a href="{{  route('train', [ 'id' => $train->id ]) }}" class="card-link">Card link</a>
+                <a href="#" class="card-link">Card link</a>
             </div>
         </div>
     </div>
-    @empty
-        <h2>non ci sono treni oggi!</h2>        
-    @endforelse
-</div>
+
 
 @endsection

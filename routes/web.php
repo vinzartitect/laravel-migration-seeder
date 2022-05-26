@@ -19,4 +19,6 @@ Route::get('/contacts', 'PageController@contacts' )->name('contacts');
 
 //Rotte per la gestione dei treni
 Route::get('/trains', 'TrainController@index' )->name('trains');
+//Rotte per stampare il singolo treno
+Route::get('/trains/{id}', 'TrainController@show' )->name('train');
 
