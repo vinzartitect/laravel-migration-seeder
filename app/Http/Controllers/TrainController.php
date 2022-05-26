@@ -13,7 +13,10 @@ class TrainController extends Controller
     public function index(){
 
         //Ottenere i dati del DB
-        $trains = Train::all();
+        //$trains = Train::all();
+
+        //Ottenere i dati del DB filtrati al giorno di oggi
+        $trains = Train::where('GiornoPartenza', '=' , '2022-05-26')->get();
 
         return view( 'pages.trains.index', compact('trains') );
     }
