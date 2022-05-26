@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PageController@home' )->name('home');
 Route::get('/about-us', 'PageController@aboutUs' )->name('aboutUs');
 Route::get('/contacts', 'PageController@contacts' )->name('contacts');
+
+//Rotte per la gestione dei treni
+Route::get('/trains', 'TrainController@index' )->name('trains');
+

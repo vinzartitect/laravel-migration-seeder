@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function home(){
-        return view( 'home' );
+        return view( 'pages.home' );
     }
 
     public function aboutUs(){
-        return view( 'aboutUs' );
+        return view( 'pages.aboutUs' );
     }
 
     public function contacts(){
-        return view( 'contacts' );
+        return view( 'pages.contacts' );
     }
 }
